@@ -10,7 +10,7 @@ app.get('/', (req,res) => {
 })
 
 app.all('*', (req,res) => {
-    res.status(404).sendFile(path.resolve(__dirname, './navbar-app/404.html'))
+    res.status(404).send('<h1>404 PAGE NOT FOUND</h1>')
 })
 
 app.listen(5000,() => {
